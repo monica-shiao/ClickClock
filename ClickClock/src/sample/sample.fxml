@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="395.0" style="-fx-background-color: #6699CC;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane fx:id="topbar" prefHeight="81.0" prefWidth="395.0" style="-fx-background-color: #336699;">
+         <children>
+            <ImageView fx:id="btn_circle_clock" fitHeight="45.0" fitWidth="52.0" layoutX="29.0" layoutY="18.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/circular-clock.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_digit_clock" fitHeight="45.0" fitWidth="45.0" layoutX="125.0" layoutY="18.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/alarm-clock%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_time_zone" fitHeight="45.0" fitWidth="46.0" layoutX="221.0" layoutY="18.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/time-zone%20(1).png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="btn_switch_hour" fitHeight="45.0" fitWidth="46.0" layoutX="321.0" layoutY="18.0" onMousePressed="#handleButtonAction" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/24-hours.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="h_circle_clock" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false" />
+      <AnchorPane fx:id="h_digit_clock" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
+         <children>
+            <Label text="digit">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="h_time_zone" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
+         <children>
+            <Label text="Time zone">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="h_switch_hour" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
+         <children>
+            <Label text="Switch ">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
