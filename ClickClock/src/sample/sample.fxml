@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -42,7 +43,27 @@
          </children></AnchorPane>
       <AnchorPane fx:id="h_time_zone" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
          <children>
-            <Label text="Time zone">
+            <CheckBox fx:id="cb_taiwan" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="110.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" selected="true" text="Taiwan">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_america" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="180.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="America">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_japan" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="255.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="Japan">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_uk" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="325.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="United Kingdom">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <Label fx:id="lb_time_zone" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="35.0" prefHeight="44.0" prefWidth="289.0" text="Time Zone">
                <font>
                   <Font size="36.0" />
                </font>

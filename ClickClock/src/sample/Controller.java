@@ -5,14 +5,11 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.util.Duration;
@@ -25,11 +22,13 @@ public class Controller {
     private AnchorPane h_circle_clock, h_digit_clock, h_time_zone,h_switch_hour;
 
     @FXML
+    private CheckBox cb_taiwan, cb_america, cb_japan, cb_uk;
+
+    @FXML
     private void handleButtonAction(MouseEvent event){
         if(event.getTarget() == btn_circle_clock){
 
             ClockPane clock=new ClockPane();
-            //BorderPane borderPane=new BorderPane();
 
             EventHandler<ActionEvent> eventHandler= e -> {
                 h_circle_clock.getChildren().clear();
@@ -73,6 +72,11 @@ public class Controller {
 
         }
         else if(event.getTarget() == btn_time_zone){
+            cb_taiwan.setOnAction(eh);
+            cb_america.setOnAction(eh);
+            cb_japan.setOnAction(eh);
+            cb_uk.setOnAction(eh);
+
             h_circle_clock.setVisible(false);
             h_digit_clock.setVisible(false);
             h_time_zone.setVisible(true);
@@ -85,4 +89,39 @@ public class Controller {
             h_switch_hour.setVisible(true);
         }
     }
+
+    EventHandler eh = new EventHandler<ActionEvent>() {
+        @Override
+        public void handle(ActionEvent event) {
+            if (event.getSource() instanceof CheckBox) {
+                CheckBox chk = (CheckBox) event.getSource();
+                if ("Taiwan".equals(chk.getText())) {
+                    cb_taiwan.setSelected(true);
+                    cb_america.setSelected(false);
+                    cb_japan.setSelected(false);
+                    cb_uk.setSelected(false);
+                }
+                else if ("America".equals(chk.getText())) {
+                    cb_taiwan.setSelected(false);
+                    cb_america.setSelected(true);
+                    cb_japan.setSelected(false);
+                    cb_uk.setSelected(false);
+                }
+                else if ("Japan".equals(chk.getText())) {
+                    cb_taiwan.setSelected(false);
+                    cb_america.setSelected(false);
+                    cb_japan.setSelected(true);
+                    cb_uk.setSelected(false);
+                }
+                else if ("United Kingdom".equals(chk.getText())) {
+                    cb_taiwan.setSelected(false);
+                    cb_america.setSelected(false);
+                    cb_japan.setSelected(false);
+                    cb_uk.setSelected(true);
+                }
+            }
+        }
+    };
 }
+
+
