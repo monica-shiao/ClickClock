@@ -91,10 +91,18 @@ public class ClockPane extends Pane{
         circle.setFill(Color.WHITE);
         circle.setStroke(Color.BLACK);
 
-        Text t1=new Text(centerX-5,centerY-clockRadius+12,"12");
-        Text t2=new Text(centerX-clockRadius+3,centerY+5,"9");
-        Text t3=new Text(centerX+clockRadius-10,centerY+3,"3");
-        Text t4=new Text(centerX-3,centerY+clockRadius-3,"6");
+        Text t12=new Text(centerX-5,centerY-clockRadius+15,"12");
+        Text t1=new Text(centerX+clockRadius-55,centerY-clockRadius+30,"1");
+        Text t2=new Text(centerX+clockRadius-25,centerY-clockRadius+63,"2");
+        Text t3=new Text(centerX+clockRadius-15,centerY+5,"3");
+        Text t4=new Text(centerX+clockRadius-25,centerY+47,"4");
+        Text t5=new Text(centerX+clockRadius-55,centerY+80,"5");
+        Text t6=new Text(centerX-3,centerY+clockRadius-7,"6");
+        Text t7=new Text(centerX-50,centerY+clockRadius-20,"7");
+        Text t8=new Text(centerX-clockRadius+20,centerY+47,"8");
+        Text t9=new Text(centerX-clockRadius+5,centerY+5,"9");
+        Text t10=new Text(centerX-clockRadius+20,centerY-clockRadius+63,"10");
+        Text t11=new Text(centerX-50,centerY-clockRadius+30,"11");
 
         double sLength=clockRadius*0.8;
         double scondX=centerX+sLength*Math.sin(second*(2*Math.PI/60));
@@ -115,7 +123,7 @@ public class ClockPane extends Pane{
         hline.setStroke(Color.GREEN);
 
         getChildren().clear();
-        getChildren().addAll(circle,t1,t2,t3,t4,sline,mline,hline);
+        getChildren().addAll(circle,t1,t2,t3,t4,t5,t6,t7,t8,t9,t10,t11,t12,sline,mline,hline);
 
     }
 }

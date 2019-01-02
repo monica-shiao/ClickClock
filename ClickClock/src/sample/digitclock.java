@@ -49,7 +49,6 @@ public class digitclock implements Runnable, Initializable {
                 date = calendar.getTime();
                 time = format.format(date);
 
-
                 format2= new SimpleDateFormat("MMMM dd yyyy");
                 date = calendar.getTime();
                 month = format2.format(date);
