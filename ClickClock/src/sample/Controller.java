@@ -32,10 +32,11 @@ public class Controller {
     private CheckBox cb_taiwan, cb_america, cb_japan, cb_uk;
 
     @FXML
-    Label dateLabel,timeLabel,dayLabel;
+    Label dateLabel,timeLabel,dayLabel, lb_area;
 
     private int country=0;
     private String[] country_str = {"Asia/Shanghai", "America/New_York", "JST" ,"Europe/London"};
+    Date date;
 
     @FXML
     private void handleButtonAction(MouseEvent event){
@@ -47,7 +48,16 @@ public class Controller {
                 h_circle_clock.getChildren().clear();
                 clock.setCurrentTime(country);
                 String timeString = clock.getHour()+":"+clock.getMinute()+":"+clock.getSecond();
-                Label lblCurrentTime=new Label(timeString);
+
+                SimpleDateFormat time_format = new SimpleDateFormat("hh:mm:ss");
+                Calendar calendar = Calendar.getInstance();
+                time_format.setTimeZone(TimeZone.getTimeZone(country_str[country]));
+                date = calendar.getTime();
+                String time = time_format.format(date);
+
+
+                Label lblCurrentTime=new Label();
+                lblCurrentTime.setText(time);
                 lblCurrentTime.setTextFill(Color.web("#0076a3"));
                 lblCurrentTime.setFont(new Font("Arial", 30));
 
@@ -139,13 +149,15 @@ public class Controller {
                 CheckBox chk = (CheckBox) event.getSource();
                 if ("Taiwan".equals(chk.getText())) {
                     country=0;
+                    lb_area.setText("Taiwan");
                     cb_taiwan.setSelected(true);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(false);
                     cb_uk.setSelected(false);
                 }
-                else if ("America".equals(chk.getText())) {
+                else if ("New York".equals(chk.getText())) {
                     country=1;
+                    lb_area.setText("New York");
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(true);
                     cb_japan.setSelected(false);
@@ -153,6 +165,7 @@ public class Controller {
                 }
                 else if ("Japan".equals(chk.getText())) {
                     country=2;
+                    lb_area.setText("Japan");
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(true);
@@ -160,6 +173,7 @@ public class Controller {
                 }
                 else if ("United Kingdom".equals(chk.getText())) {
                     country=3;
+                    lb_area.setText("United Kingdom");
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(false);

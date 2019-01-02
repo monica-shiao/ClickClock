@@ -59,7 +59,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lb_taiwan" layoutX="150.0" layoutY="30.0" prefHeight="44.0" prefWidth="132.0" text="Taiwan">
+            <Label fx:id="lb_area" layoutX="159.0" layoutY="30.0" prefHeight="44.0" prefWidth="206.0" text="Taiwan">
                <font>
                   <Font size="24.0" />
                </font>
@@ -74,7 +74,7 @@
                   <Font size="24.0" />
                </font>
             </CheckBox>
-            <CheckBox fx:id="cb_america" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="205.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" text="America">
+            <CheckBox fx:id="cb_america" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="205.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" text="New York">
                <font>
                   <Font size="24.0" />
                </font>
