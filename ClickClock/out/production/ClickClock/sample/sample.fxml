@@ -35,9 +35,20 @@
       <AnchorPane fx:id="h_circle_clock" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false" />
       <AnchorPane fx:id="h_digit_clock" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
          <children>
-            <Label text="digit">
+            <Label fx:id="dateLabel" layoutX="100.0" layoutY="63.0" prefHeight="49.0" prefWidth="371.0" text="" textFill="#0076a3">
                <font>
-                  <Font size="36.0" />
+                  <Font size="22.0" />
+
+               </font>
+            </Label>
+            <Label fx:id="timeLabel" layoutX="80.0" layoutY="121.0" prefHeight="49.0" prefWidth="371.0" text="" textFill="#0076a3">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="dayLabel" layoutX="165.0" layoutY="184.0" prefHeight="49.0" prefWidth="371.0" text="" textFill="#0076a3">
+               <font>
+                  <Font size="22.0" />
                </font>
             </Label>
          </children></AnchorPane>
