@@ -2,6 +2,7 @@ package sample;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -24,6 +25,7 @@ public class Controller {
     @FXML
     private CheckBox cb_taiwan, cb_america, cb_japan, cb_uk;
 
+    private int country=0;
     @FXML
     private void handleButtonAction(MouseEvent event){
         if(event.getTarget() == btn_circle_clock){
@@ -32,7 +34,7 @@ public class Controller {
 
             EventHandler<ActionEvent> eventHandler= e -> {
                 h_circle_clock.getChildren().clear();
-                clock.setCurrentTime();
+                clock.setCurrentTime(country);
                 String timeString=clock.getHour()+":"+clock.getMinute()+":"+clock.getSecond();
                 Label lblCurrentTime=new Label(timeString);
                 lblCurrentTime.setTextFill(Color.web("#0076a3"));
@@ -96,24 +98,28 @@ public class Controller {
             if (event.getSource() instanceof CheckBox) {
                 CheckBox chk = (CheckBox) event.getSource();
                 if ("Taiwan".equals(chk.getText())) {
+                    country=0;
                     cb_taiwan.setSelected(true);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(false);
                     cb_uk.setSelected(false);
                 }
                 else if ("America".equals(chk.getText())) {
+                    country=1;
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(true);
                     cb_japan.setSelected(false);
                     cb_uk.setSelected(false);
                 }
                 else if ("Japan".equals(chk.getText())) {
+                    country=2;
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(true);
                     cb_uk.setSelected(false);
                 }
                 else if ("United Kingdom".equals(chk.getText())) {
+                    country=3;
                     cb_taiwan.setSelected(false);
                     cb_america.setSelected(false);
                     cb_japan.setSelected(false);

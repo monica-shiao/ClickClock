@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="395.0" style="-fx-background-color: #6699CC;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane fx:id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="503.0" prefWidth="395.0" style="-fx-background-color: transparenttransparent;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <AnchorPane fx:id="topbar" prefHeight="81.0" prefWidth="395.0" style="-fx-background-color: #336699;">
          <children>
@@ -43,31 +43,41 @@
          </children></AnchorPane>
       <AnchorPane fx:id="h_time_zone" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
          <children>
-            <CheckBox fx:id="cb_taiwan" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="110.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" selected="true" text="Taiwan">
+            <Label alignment="CENTER" layoutX="31.0" layoutY="30.0" prefHeight="44.0" prefWidth="132.0" text="目前時區：">
                <font>
                   <Font size="24.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="cb_america" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="180.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="America">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="cb_japan" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="255.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="Japan">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </CheckBox>
-            <CheckBox fx:id="cb_uk" alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="325.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="200.0" text="United Kingdom">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </CheckBox>
-            <Label fx:id="lb_time_zone" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" layoutY="35.0" prefHeight="44.0" prefWidth="289.0" text="Time Zone">
-               <font>
-                  <Font size="36.0" />
                </font>
             </Label>
+            <Label fx:id="lb_taiwan" layoutX="150.0" layoutY="30.0" prefHeight="44.0" prefWidth="132.0" text="Taiwan">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="31.0" layoutY="90.0" prefHeight="44.0" prefWidth="132.0" text="時區選擇：">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <CheckBox fx:id="cb_taiwan" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="135.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="139.0" selected="true" text="Taiwan">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_america" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="205.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" text="America">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_japan" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="280.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" text="Japan">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="cb_uk" alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="350.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="239.0" text="United Kingdom">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </CheckBox>
          </children></AnchorPane>
       <AnchorPane fx:id="h_switch_hour" layoutY="90.0" prefHeight="415.0" prefWidth="395.0" style="-fx-background-color: #99CCFF;" visible="false">
          <children>

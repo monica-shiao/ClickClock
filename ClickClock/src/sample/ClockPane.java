@@ -8,15 +8,17 @@ import javafx.scene.text.Text;
 
 import java.util.Calendar;
 import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 public class ClockPane extends Pane{
     private int hour;
     private int minute;
     private int second;
     private double w=250,h=250;
+    private String[] country = {"Asia/Shanghai", "America/New_York", "JST" ,"Europe/London"};
 
     public ClockPane() {
-        setCurrentTime();
+        setCurrentTime(0);
     }
 
     public ClockPane(int hour, int minute, int second) {
@@ -71,11 +73,12 @@ public class ClockPane extends Pane{
         paintClock();
     }
 
-    public void setCurrentTime() {
-        Calendar calendar=new GregorianCalendar();
+    public void setCurrentTime(int num) {
+        Calendar calendar=new GregorianCalendar(TimeZone.getTimeZone(country[num]));
         this.hour=calendar.get(Calendar.HOUR_OF_DAY);
         this.minute=calendar.get(Calendar.MINUTE);
         this.second=calendar.get(Calendar.SECOND);
+
         paintClock();
     }
 

@@ -1,17 +1,45 @@
 package sample;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
+
+    //private double xOffset = 100;
+    //private double yOffset = 100;
 
     @Override
     public void start(Stage stage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        //stage.initStyle(StageStyle.TRANSPARENT);
+        /*
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+
+
+        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getSceneX() - xOffset);
+                stage.setY(event.getSceneY() - yOffset);
+            }
+        });*/
+
+
         Scene scene = new Scene(root);
+        //scene.setFill(Color.TRANSPARENT);
         stage.setTitle("Click Clock");
         stage.setScene(scene);
         stage.show();
